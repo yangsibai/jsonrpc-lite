@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `JsonRPC` enum in crate `jsonrpc_lite`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, JsonRPC">
+
+    <title>jsonrpc_lite::JsonRPC - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    <link rel="shortcut icon" href="https://iorust.github.io/favicon.ico">
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <a href='../jsonrpc_lite/index.html'><img src='https://avatars3.githubusercontent.com/u/15439811?v=3&s=200' alt='logo' width='100'></a>
+        <p class='location'><a href='index.html'>jsonrpc_lite</a></p><script>window.sidebarCurrent = {name: 'JsonRPC', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>jsonrpc_lite</a>::<wbr><a class='enum' href=''>JsonRPC</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-117' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#71-82' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum JsonRPC {
+    Request(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;),
+    Notification(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;),
+    Success(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;),
+    Error(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;),
+    ErrorRequst(<a class='struct' href='../jsonrpc_lite/struct.Error.html' title='jsonrpc_lite::Error'>Error</a>),
+}</pre><div class='docblock'><p>JSON-RPC 2.0 Request object and Response object
+<a href="http://www.jsonrpc.org/specification">JSON-RPC 2.0 Specification</a>.</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.Request' class='variant'><code>Request(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;)</code></span><div class='docblock'><p>Request object</p>
+</div><span id='variant.Notification' class='variant'><code>Notification(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;)</code></span><div class='docblock'><p>Notification object</p>
+</div><span id='variant.Success' class='variant'><code>Success(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;)</code></span><div class='docblock'><p>Success Response</p>
+</div><span id='variant.Error' class='variant'><code>Error(<a class='type' href='../serde_json/value/type.Map.html' title='serde_json::value::Map'>Map</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;)</code></span><div class='docblock'><p>Error Response</p>
+</div><span id='variant.ErrorRequst' class='variant'><code>ErrorRequst(<a class='struct' href='../jsonrpc_lite/struct.Error.html' title='jsonrpc_lite::Error'>Error</a>)</code></span><div class='docblock'><p>Error Request</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-181' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#84-322' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.request' class='method'><code>fn <a href='#method.request' class='fnname'>request</a>(id: &amp;<a class='enum' href='../jsonrpc_lite/enum.Id.html' title='jsonrpc_lite::Id'>Id</a>, method: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 request object without params</p>
+</div><h4 id='method.request_with_params' class='method'><code>fn <a href='#method.request_with_params' class='fnname'>request_with_params</a>(id: &amp;<a class='enum' href='../jsonrpc_lite/enum.Id.html' title='jsonrpc_lite::Id'>Id</a>, method: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, params: &amp;<a class='enum' href='../jsonrpc_lite/enum.Params.html' title='jsonrpc_lite::Params'>Params</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 request object with params</p>
+</div><h4 id='method.notification' class='method'><code>fn <a href='#method.notification' class='fnname'>notification</a>(method: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 notification object without params</p>
+</div><h4 id='method.notification_with_params' class='method'><code>fn <a href='#method.notification_with_params' class='fnname'>notification_with_params</a>(method: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, params: &amp;<a class='enum' href='../jsonrpc_lite/enum.Params.html' title='jsonrpc_lite::Params'>Params</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 notification object with params</p>
+</div><h4 id='method.success' class='method'><code>fn <a href='#method.success' class='fnname'>success</a>(id: &amp;<a class='enum' href='../jsonrpc_lite/enum.Id.html' title='jsonrpc_lite::Id'>Id</a>, result: &amp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 success response object</p>
+</div><h4 id='method.error' class='method'><code>fn <a href='#method.error' class='fnname'>error</a>(id: &amp;<a class='enum' href='../jsonrpc_lite/enum.Id.html' title='jsonrpc_lite::Id'>Id</a>, error: &amp;<a class='struct' href='../jsonrpc_lite/struct.Error.html' title='jsonrpc_lite::Error'>Error</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Creates a JSON-RPC 2.0 error response object</p>
+</div><h4 id='method.get_id' class='method'><code>fn <a href='#method.get_id' class='fnname'>get_id</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../jsonrpc_lite/enum.Id.html' title='jsonrpc_lite::Id'>Id</a>&gt;</code></h4>
+<h4 id='method.get_method' class='method'><code>fn <a href='#method.get_method' class='fnname'>get_method</a>&lt;'a&gt;(&amp;'a self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;</code></h4>
+<h4 id='method.get_params' class='method'><code>fn <a href='#method.get_params' class='fnname'>get_params</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../jsonrpc_lite/enum.Params.html' title='jsonrpc_lite::Params'>Params</a>&gt;</code></h4>
+<h4 id='method.get_result' class='method'><code>fn <a href='#method.get_result' class='fnname'>get_result</a>&lt;'a&gt;(&amp;'a self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;</code></h4>
+<h4 id='method.get_error' class='method'><code>fn <a href='#method.get_error' class='fnname'>get_error</a>&lt;'a&gt;(&amp;'a self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>&gt;</code></h4>
+<h4 id='method.parse' class='method'><code>fn <a href='#method.parse' class='fnname'>parse</a>(json: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;Self&gt;</code></h4>
+<div class='docblock'><p>Parses JSON string to a array of JSON-RPC 2.0 object</p>
+</div><h4 id='method.parse_object' class='method'><code>fn <a href='#method.parse_object' class='fnname'>parse_object</a>(json: &amp;<a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a>) -&gt; Self</code></h4>
+<div class='docblock'><p>Parses JSON value object to a JSON-RPC 2.0 object</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../serde_json/value/trait.ToJson.html' title='serde_json::value::ToJson'>ToJson</a> for <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-267' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#324-335' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_json' class='method'><code>fn <a href='../serde_json/value/trait.ToJson.html#tymethod.to_json' class='fnname'>to_json</a>(&amp;self) -&gt; <a class='enum' href='../serde_json/value/enum.Value.html' title='serde_json::value::Value'>Value</a></code></h4>
+<div class='docblock'><p>Converts a JSON-RPC 2.0 object to a JSON value</p>
+</div></div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-128' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-142' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-173' class='srclink' href='../src/jsonrpc_lite/src/jsonrpc.rs.html#70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../jsonrpc_lite/enum.JsonRPC.html' title='jsonrpc_lite::JsonRPC'>JsonRPC</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "jsonrpc_lite";
+        window.playgroundUrl = "https://play.rust-lang.org";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script src="../playpen.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
